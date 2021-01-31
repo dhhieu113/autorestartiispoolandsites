@@ -38,12 +38,14 @@ namespace IISAutoRestartApp
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblcurrent = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(12, 156);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(415, 282);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
@@ -75,6 +77,7 @@ namespace IISAutoRestartApp
             // 
             this.richTextBox2.Location = new System.Drawing.Point(446, 156);
             this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(342, 282);
             this.richTextBox2.TabIndex = 3;
             this.richTextBox2.Text = "";
@@ -105,11 +108,25 @@ namespace IISAutoRestartApp
             this.lblcurrent.TabIndex = 6;
             this.lblcurrent.Text = "Hiện tại";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(143, 67);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(245, 21);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Auto start when Windows Start-Up";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.lblcurrent);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -138,6 +155,7 @@ namespace IISAutoRestartApp
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblcurrent;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
